@@ -27,8 +27,13 @@ const options = {
   },
   dialectOptions: {
     charset: "utf8mb4",
+    ssl: {
+        require: true,
+        rejectUnauthorized: false
+    }
   },
 };
+console.log(options)
 
 if (config.cert) {
   options.dialectOptions.ssl = {
